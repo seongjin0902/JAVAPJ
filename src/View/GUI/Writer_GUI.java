@@ -48,12 +48,12 @@ public class Writer_GUI extends JFrame implements ActionListener, KeyListener {
 
 // 		Positioning
 		txt1.setBounds(40, 70, 700, 40);
-		txt2.setBounds(40, 125, 950, 570);
+		txt2.setBounds(40, 125, 900, 570);
 
-		btn1.setBounds(770, 70, 110, 40); // 저장
-		btn2.setBounds(870, 700, 90, 30); // 나가기
+		btn1.setBounds(800, 70, 110, 40); // 저장
+		btn2.setBounds(850, 700, 90, 30); // 나가기
 
-		scroll1.setBounds(40, 125, 950, 570);
+		scroll1.setBounds(40, 125, 900, 570);
 
 // 		Event처리
 		btn1.addActionListener(this);
@@ -65,22 +65,22 @@ public class Writer_GUI extends JFrame implements ActionListener, KeyListener {
 		txt1.addFocusListener(new FocusListener() {
 			@Override
 			public void focusGained(FocusEvent e) {
-				if (txt2.getText().equals("title")) {
-					txt2.setText("");
+				if (txt1.getText().equals("제목")) {
+					txt1.setText("");
 				}
 			}
 
 			@Override
 			public void focusLost(FocusEvent e) {
-				if (txt2.getText().isEmpty()) {
-					txt2.setText("title");
+				if (txt1.getText().isEmpty()) {
+					txt1.setText("제목");
 				}
 			}
 		});
 		txt2.addFocusListener(new FocusListener() {
 			@Override
 			public void focusGained(FocusEvent e) {
-				if (txt2.getText().equals("contents")) {
+				if (txt2.getText().equals("내용")) {
 					txt2.setText("");
 				}
 			}
@@ -88,7 +88,7 @@ public class Writer_GUI extends JFrame implements ActionListener, KeyListener {
 			@Override
 			public void focusLost(FocusEvent e) {
 				if (txt2.getText().isEmpty()) {
-					txt2.setText("contents");
+					txt2.setText("내용");
 				}
 			}
 		});
